@@ -41,7 +41,11 @@ const updateProduct = () => {
     }
     if (isValidated) {
       localStorage.setItem("productList", JSON.stringify(productList));
-      console.log("product added sucessfully");
+      formElement.form.reset();
     }
   }
 };
+
+document
+  .querySelector("#updateProduct")
+  .addEventListener("click", updateProduct);

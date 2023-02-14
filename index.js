@@ -1,10 +1,18 @@
 const table = document.querySelector("tbody");
 
+const headerElement = {
+  name: document.querySelector("#name"),
+  price: document.querySelector("#price"),
+  descripiton: document.querySelector("#description"),
+  id: document.querySelector("#id"),
+};
+
 const displayProducts = () => {
   let productList = JSON.parse(localStorage.getItem("productList"));
   table.innerHTML = "";
   productList.forEach((product, index) => {
-    table.innerHTML += `<tr>
+    const tableRow = document.createElement("tr");
+    tableRow.innerHTML += `<tr>
         <th scope="row">${product.id}</th>
         <td>${product.name}</td>
         <td>${product.price}</td>
@@ -15,11 +23,11 @@ const displayProducts = () => {
             <i id="v${index}" class="material-icons">visibility</i>
         </td>
       </tr>`;
+    table.appendChild(tableRow);
     document.getElementById(`e${index}`).addEventListener("click", () => {
       localStorage.setItem("product", JSON.stringify(product));
       location.replace("./update-product.html");
     });
-    console.log(document.getElementById(`e${index}`));
     document.querySelector(`#v${index}`).addEventListener("click", () => {
       localStorage.setItem("product", JSON.stringify(product));
       location.replace("./view-product.html");
@@ -39,3 +47,9 @@ const displayProducts = () => {
   }
   displayProducts();
 })();
+
+headerElement.name.addEventListener("click", (event) => {});
+const statusOfSorting = {
+  sortBy: "none",
+  order: "a",
+};
