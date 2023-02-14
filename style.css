@@ -1,0 +1,10 @@
+.navbar {
+  position: fixed !important;
+  width: 100%;
+}
+body {
+  position: relative;
+}
+.container {
+  padding-top: 100px;
+}

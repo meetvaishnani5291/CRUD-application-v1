@@ -27,6 +27,30 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Product management system</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="add-product.html">Add product</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <div class="container">
       <br />
       <br />
@@ -41,83 +65,11 @@
             <th scope="col">Action</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>Mark</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>Mark</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry the Bird</td>
-            <td>Thornton</td>
-            <td>@twitter</td>
-            <td>Mark</td>
-          </tr>
-        </tbody>
+        <tbody></tbody>
       </table>
       <br />
       <br />
       <br />
-      <form>
-        <div class="form-group">
-          <label for="productName">Product Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="productName"
-            placeholder="Enter product name"
-          />
-        </div>
-        <div class="form-group">
-          <label for="productPrice">Product price</label>
-          <input
-            type="text"
-            class="form-control"
-            id="productPrice"
-            placeholder="Enter product price"
-          />
-        </div>
-        <div class="form-group">
-          <label for="productDescription">Product description</label>
-          <input
-            type="text"
-            class="form-control"
-            id="productDescription"
-            placeholder="Enter description for product"
-          />
-        </div>
-        <div class="form-group">
-          <label for="productImage">Product Image</label>
-          <input
-            type="text"
-            class="form-control"
-            id="productImage"
-            placeholder="Enter url for image"
-          />
-        </div>
-        <!-- <div class="form-group">
-          <label for="productImage">Product image</label>
-          <input type="file" class="form-control-file" id="productImage" />
-        </div> -->
-
-        <!-- <button class="btn btn-primary" id="addProduct">Add Product</button> -->
-        <input
-          type="button"
-          value="Add Product"
-          class="btn btn-primary"
-          id="addProduct"
-        />
-      </form>
     </div>
   </body>
 </html>
