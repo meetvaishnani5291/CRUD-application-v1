@@ -21,6 +21,8 @@ const addProduct = () => {
   productList.push(newProduct);
   localStorage.setItem("productList", JSON.stringify(productList));
   formElement.form.reset();
+  alert("Product added successfully.");
+  window.location.replace("./index.html");
 };
 
 document.querySelector("#addProduct").addEventListener("click", addProduct);
@@ -28,6 +30,16 @@ document.querySelector("#addProduct").addEventListener("click", addProduct);
 const validateInput = (newProduct) => {
   const productList = JSON.parse(localStorage.getItem("productList"));
   let isValidated = true;
+  if (
+    newProduct.name === "" ||
+    newProduct.price === "" ||
+    newProduct.descripiton === "" ||
+    newProduct.image === ""
+  ) {
+    isValidated = false;
+    alert("All field are mandatory.");
+  }
+
   if (
     productList.findIndex((product) => {
       return product.name === newProduct.name;

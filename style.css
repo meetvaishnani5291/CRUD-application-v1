@@ -8,3 +8,21 @@ body {
 .container {
   padding-top: 100px;
 }
+span {
+  font-size: 25px;
+  font-weight: 400;
+}
+.hide {
+  display: none;
+}
+.rotateArrow {
+  transform: rotate(180deg);
+}
+span > p {
+  display: inline-block;
+  height: fit-content;
+  margin-bottom: 0 !important;
+}
+.btnCursor {
+  cursor: pointer;
+}

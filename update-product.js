@@ -22,6 +22,14 @@ const updateProduct = () => {
     formElement.price.value === productForUpdate.price &&
     formElement.image.value === productForUpdate.image
   ) {
+    alert("Please made some change to update product");
+  } else if (
+    formElement.name.value === "" ||
+    formElement.descripiton.value === "" ||
+    formElement.price.value === "" ||
+    formElement.image.value === ""
+  ) {
+    alert("All fields are mandatory");
   } else {
     const productList = JSON.parse(localStorage.getItem("productList"));
     productForUpdate.name = formElement.name.value;
@@ -41,7 +49,10 @@ const updateProduct = () => {
     }
     if (isValidated) {
       localStorage.setItem("productList", JSON.stringify(productList));
+      formElement.name.classList.remove("is-invalid");
       formElement.form.reset();
+      alert("Product updated successfully.");
+      window.location.replace("./index.html");
     }
   }
 };
